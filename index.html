@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Traffic in Mozambique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        p {
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+
+        .responsive-iframe {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 1.5em;
+            }
+
+            .responsive-iframe {
+                aspect-ratio: 4 / 3;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Internet Traffic in Mozambique</h1>
+    <p>This page provides insights into the Internet traffic, attack volume, and email threat classification for Mozambique using data from Cloudflare Radar.</p>
+
+    <section>
+        <h2>NetFlows Time Series for Mozambique</h2>
+        <div class="iframe-container">
+            <iframe class="responsive-iframe"
+                    src="https://radar.cloudflare.com/embed/DataExplorerVisualizer?path=netflows%2Ftimeseries&dateRange=1d&mainLocation=MZ&chartState=%7B%22showAnnotations%22%3Atrue%2C%22xy.hiddenSeries%22%3A%5B%5D%2C%22xy.highlightedSeries%22%3Anull%2C%22xy.previousVisible%22%3Atrue%7D" 
+                    title="Cloudflare Radar - NetFlows time series for Mozambique" 
+                    loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2>Attack Volume in Mozambique</h2>
+        <div class="iframe-container">
+            <iframe class="responsive-iframe"
+                    src="https://radar.cloudflare.com/embed/AttackVolumeXY?dateRange=1d&chartState=%7B%22showAnnotations%22%3Atrue%2C%22xy.hiddenSeries%22%3A%5B%5D%2C%22xy.highlightedSeries%22%3Anull%2C%22xy.previousVisible%22%3Atrue%7D" 
+                    title="Cloudflare Radar - Attack volume" 
+                    loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2>Email Threat Classification in Mozambique</h2>
+        <div class="iframe-container">
+            <iframe class="responsive-iframe"
+                    src="https://radar.cloudflare.com/embed/EmailMaliciousXY?dateRange=1d&chartState=%7B%22showAnnotations%22%3Atrue%2C%22xy.hiddenSeries%22%3A%5B%5D%2C%22xy.highlightedSeries%22%3Anull%2C%22xy.previousVisible%22%3Atrue%7D" 
+                    title="Cloudflare Radar - Email threat classification" 
+                    loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+</body>
+</html>
